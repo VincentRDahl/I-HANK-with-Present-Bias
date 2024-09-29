@@ -44,13 +44,13 @@ def solve_hh_backwards(par,z_trans,beta,ra,inc_TH,inc_NT,vbeg_a_plus,vbeg_a,a,c,
 
     for i_z in range(par.Nz):
         uc_TH[0,i_z,:] = c[0,i_z,:]**(-par.sigma)*par.z_grid[i_z]
-        uc_NT[2,i_z,:] = c[2,i_z,:]**(-par.sigma)*par.z_grid[i_z]
         uc_TH[1,i_z,:] = c[1,i_z,:]**(-par.sigma)*par.z_grid[i_z]
+        uc_NT[2,i_z,:] = c[2,i_z,:]**(-par.sigma)*par.z_grid[i_z]
         uc_NT[3,i_z,:] = c[3,i_z,:]**(-par.sigma)*par.z_grid[i_z]
 
         c_TH[0,i_z,:] = c[0,i_z,:]
-        c_NT[2,i_z,:] = c[2,i_z,:]
         c_TH[1,i_z,:] = c[1,i_z,:]
+        c_NT[2,i_z,:] = c[2,i_z,:]
         c_NT[3,i_z,:] = c[3,i_z,:]
 
     uc_TH[:] /= par.sT

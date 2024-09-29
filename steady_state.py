@@ -38,7 +38,6 @@ def prepare_hh_ss(model):
     ###########################
     
     for i_fix in range(par.Nfix):
-        #print("Ergodic = ",e_ergodic)
         if i_fix == 0:
             ss.Dbeg[i_fix,:,0] = e_ergodic*par.sT*(1-par.sdelta)
         elif i_fix == 1:
