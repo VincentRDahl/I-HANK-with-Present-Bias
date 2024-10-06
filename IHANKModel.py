@@ -73,8 +73,8 @@ class IHANKModelClass(EconModelClass,GEModelClass):
         par.alphaF = 1/3 # share of foreign goods in home tradeable consumption
         par.etaF = 2.0 # elasticity of substitution between home and foreign tradeable goods
           
-        par.varphiTH = np.nan # disutility of labor in tradeable sector (determined in s)
-        par.varphiNT = np.nan # disutility of labor in non-tradeable sector (determined in s)
+        par.varphiTH = np.nan # disutility of labor in tradeable sector (determined in ss)
+        par.varphiNT = np.nan # disutility of labor in non-tradeable sector (determined in ss)
         par.nu = 1.0 # Frisch elasticity of labor supply
               
         # c. income parameters

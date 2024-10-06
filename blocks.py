@@ -43,7 +43,7 @@ def mon_pol(par,ini,ss,E,CB):
 @nb.njit
 def production(par,ini,ss,
                ZTH,ZNT,NTH,NNT,piWTH,piWNT,
-               YTH,YNT,WTH,WNT,PTH,PNT):
+               YTH,YNT,WTH,WNT,PTH,PNT,ProfitTH,ProfitNT):
     
     # a. production
     YTH[:] = ZTH*NTH
@@ -56,6 +56,10 @@ def production(par,ini,ss,
     # c. price = marginal cost
     PTH[:] = WTH/ZTH
     PNT[:] = WNT/ZNT
+
+    # d. Profit
+    ProfitTH[:] = PTH*YTH - WTH*NTH
+    ProfitNT[:] = PNT*YNT - WNT*NNT
 
 @nb.njit
 def prices(par,ini,ss,
